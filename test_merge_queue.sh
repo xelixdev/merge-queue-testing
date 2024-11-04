@@ -5,6 +5,7 @@ do
 	touch mq-test$i
 	git add mq-test$i
 	git commit -m "mq-test$i"
+	git push
 	gh pr create --body="" --title=""
 	git checkout main
 done	
