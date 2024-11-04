@@ -1,6 +1,8 @@
 pipeline {
   agent {
-    label "master"
+    node {
+      label 'spot-instances-frontend'
+    }
   }
   options {
     timeout(time: 30, unit: 'MINUTES')
@@ -13,8 +15,8 @@ pipeline {
           sh '''
           while true
           do
-            echo "SLEEPING for 5 minutes"
-            sleep 300
+            echo "SLEEPING for 20 seconds"
+            sleep 20
             RAN_NUM=$(( RANDOM % 3 ))
             if [ "$RAN_NUM" -eq 1 ]; then
               echo "PASSED CI"
