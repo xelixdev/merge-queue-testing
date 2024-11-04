@@ -14,7 +14,7 @@ pipeline {
           while true
           do
             echo "SLEEPING for 5 minutes"
-            sleep 20
+            sleep 300
             RAN_NUM=$(( RANDOM % 3 ))
             if [ "$RAN_NUM" -eq 1 ]; then
               echo "PASSED CI"
