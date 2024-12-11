@@ -1,4 +1,8 @@
 repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: "v5.0.0"
+  hooks:
+  - id: no-commit-to-branch
 - repo: https://github.com/trufflesecurity/trufflehog.git
   rev: "v3.84.2"
   hooks:
